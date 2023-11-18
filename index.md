@@ -6,6 +6,10 @@ layout: base.njk
 
 A web component that provides text-search without server-side code or database. You can support this open-source project by giving it a star on [Github](https://github.com/eduardo-uribe/static-search).
 
+## Show don't tell
+
+Below the `static-search` component will search for matches between the input string and a provided `.json` file that contains an array of objects with [Eleventy](https://www.11ty.dev/) learning resources.
+
 <static-search
       data-resource-url="index.json"
       data-no-search-results-found-message="No search results found"
@@ -89,6 +93,8 @@ A web component that provides text-search without server-side code or database. 
 </static-search>
 
 ## Start using
+
+_This is a work in-progress, so updates will continously be provided_.
 
 `<script src="https://cdn.jsdelivr.net/gh/eduardo-uribe/static-search/static-search.js"</script>`
 
