@@ -2,100 +2,52 @@
 layout: base.njk
 ---
 
-`<static-search>`
+# `<static-search>` v0.2.0-beta
 
-A web component that provides text-search without server-side code or database. You can support this open-source project by giving it a star on [Github](https://github.com/eduardo-uribe/static-search).
+A progressively enhanced web component that provides text-search without server-side code or database.
 
-## Show don't tell
+You can support this open-source project by giving it a star on [Github](https://github.com/eduardo-uribe/static-search).
 
-Below the `static-search` component will search for matches between the input string and a provided `.json` file that contains an array of objects with [Eleventy](https://www.11ty.dev/) learning resources.
+## Who is it for?
 
-<static-search
-      data-resource-url="index.json"
-      data-no-search-results-found-message="No search results found"
-      data-show-search-provided-by-message="true"
-      data-search-results
-    >
-<template id="static-search-form" shadowrootmode="open">
+Built for static websites.
 
-<style>
-  :host {
-    display: block;
-    font-size: 16px;
-  }
+## Features
 
-  form {
-    display: flex;
-    justify-content: space-between;
-  }
+- No database needed
+- No server-side code needed
 
-  input {
-    border: 1px solid black;
-    border-radius: 2px;
-    width: 70%;
-    height: 50px;
-    text-indent: 0.5rem;
-  }
+## Demos
 
-  button {
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 2px;
-    width: 29%;
-  }
+Websites using `<static-search>`.
 
-  :host > ul {
-    border: 1px solid black;
-    border-radius: 2px;
-    list-style: none;
-    padding: 0.5rem 0 0;
-    max-height: 55vh;
-    overflow: scroll;
-  }
+- [https://eduardouribe.com](https://eduardouribe.com)
 
-  :host ul ul {
-    padding-left: 25px;
-  }
+## Technical terms
 
-  :host ul ul li {
-    margin-bottom: 0.75rem;
-  }
+The term _index_ in search usually...
 
-  :host ul ul li a {
-    line-height: 1.5;
-  }
+## Step-by-step instructions
 
-  #search-provided-by-message {
-    background-color: rgb(6, 6, 6);
-    color: white;
-    padding: 0.5rem;
-    position: sticky;
-    bottom: 0;
-  }
+For now the static-search web component only provides text-search functionality, so we must generate and host our own search index.
 
-  #search-provided-by-message-link {
-    color: white;
-  }
-</style>
+### Installing
 
-<form role="search">
-  <input
-    type="search"
-    placeholder="Search this website"
-    required
-    aria-label="Search throught this websites content."
-  />
-  <button>Search</button>
-</form>
+Copy and paste the [web component HTML](https://github.com/eduardo-uribe/static-search/blob/main/index.html) into the web page where we want to include search.
 
-</template>
-</static-search>
+Copy and paste the [web component JavaScript file](https://github.com/eduardo-uribe/static-search/blob/main/static-search.js) into your project directory.
 
-## Start using
+### Requirements
 
-_This is a work in-progress, so updates will continously be provided_.
+1. ### Index your site
 
-`<script src="https://cdn.jsdelivr.net/gh/eduardo-uribe/static-search/static-search.js"</script>`
+   Unordered list of links to external authors showcasing how to index your data in specific Static Site Generators (SSG's). For example Eleventy, Hugo, Jekyll.
 
-We add the above `<script>` HTML element to embed the executable JavaScript code. The `<script>`'s `src` attribute value specifies the URL of the external JavaScript code.
+   - [Eleventy](https://www.hawksworx.com/blog/adding-search-to-a-jamstack-site/)
+   - [Jekyll](https://nachtimwald.com/2020/06/10/full-text-search-with-jekyll/#indexing-posts)
+   - [Hugo](https://gomakethings.com/how-to-create-your-own-search-api-for-a-static-website-with-javascript-and-php/#creating-a-search-index)
+
+2. ### List item template UI
+   Customize the UI for each rendered UI list item.
+
+### Setting up

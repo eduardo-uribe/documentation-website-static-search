@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx @11ty/eleventy",
-    "serve": "npx @11ty/eleventy --serve",
+    "serve": "npx @11ty/eleventy --quiet --serve",
     "quiet": "npx @11ty/eleventy --quiet",
     "dryrun": "npx @11ty/eleventy --dryrun"
   },
